@@ -1,0 +1,7 @@
+{
+    "name": "HTTPS-only APT",
+    "id": "apt-https",
+    "version": "0.0.0",
+    "description": "Bootstraps https transport without using http.",
+    "installsAfter": []
+}

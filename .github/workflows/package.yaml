@@ -1,0 +1,23 @@
+name: Update package
+on:
+  workflow_dispatch:
+
+jobs:
+  main:
+    if: ${{ github.ref == 'refs/heads/main' }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      packages: write
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v5
+
+      - name: Publish package
+        uses: devcontainers/action@v1
+        with:
+          base-path-to-features: ./src
+          publish-features: true
+
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
