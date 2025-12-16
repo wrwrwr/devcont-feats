@@ -1,0 +1,44 @@
+{
+    "name": "Repo user",
+    "id": "repo-user",
+    "version": "0.0.0",
+    "description": "Creates a user with the specified name and ids.",
+    "options": {
+        "name": {
+            "type": "string",
+            "proposals": [
+                "dev",
+                "devcont"
+            ],
+            "default": "dev",
+            "description": "In-container user name."
+        },
+        "userId": {
+            "type": "string",
+            "proposals": [
+                "1111",
+                "1234"
+            ],
+            "default": "1111",
+            "description": "In-container user id."
+        },
+        "groupId": {
+            "type": "string",
+            "proposals": [
+                "1111",
+                "1234"
+            ],
+            "default": "1111",
+            "description": "In-container group id."
+        },
+        "shell": {
+            "type": "string",
+            "proposals": [
+                "/bin/bash",
+                "/bin/zsh"
+            ],
+            "default": "/bin/bash",
+            "description": "Login shell (not auto-installed)."
+        }
+    }
+}
