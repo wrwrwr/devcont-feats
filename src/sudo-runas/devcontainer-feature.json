@@ -1,0 +1,30 @@
+{
+    "name": "Sudo run-as",
+    "id": "sudo-runas",
+    "version": "0.0.0",
+    "description": "Lets the named user execute the listed commands.",
+    "options": {
+        "name": {
+            "type": "string",
+            "proposals": [
+                "ubuntu",
+                "dev"
+            ],
+            "default": "ubuntu",
+            "description": "In-container user name."
+        },
+        "runas": {
+            "type": "string",
+            "proposals": [
+                "ALL = (root) NOPASSWD: ALL",
+                "ALL = (root) NOPASSWD: sudoedit /etc/hosts",
+                "ALL = (root) NOPASSWD: /usr/bin/apt update, /usr/bin/apt install zsh"
+            ],
+            "default": "",
+            "description": "Allowed commands (a sudoers entry)."
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ]
+}
