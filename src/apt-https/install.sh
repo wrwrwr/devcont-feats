@@ -7,11 +7,9 @@ echo "Activating feature 'apt-https'..."
 echo "Replacing http with https in apt sources..."
 sed --in-place s/http:/https:/g /etc/apt/sources.list.d/*.sources
 
-echo "Configuring certificate for the https transport..."
+echo "Configuring bootstrap certificate for apt..."
 cat > /etc/apt/apt.conf.d/90-apt-https.conf << EOF
-Acquire::https {
-     CAInfo "/etc/apt/isrg-root-x1-2015.crt";
-};
+Acquire::https::CAInfo "/etc/apt/isrg-root-x1-2015.crt";
 EOF
 
 cat > /etc/apt/isrg-root-x1-2015.crt << EOF
@@ -47,3 +45,11 @@ mRGunUHBcnWEvgJBQl9nJEiU0Zsnvgc/ubhPgXRR4Xq37Z0j4r7g1SgEEzwxA57d
 emyPxgcYxn/eR44/KJ4EBs+lVDR3veyJm+kXQ99b21/+jh5Xos1AnX5iItreGCc=
 -----END CERTIFICATE-----
 EOF
+
+echo "Installing the Ubuntu certificates bundle..."
+apt-get update
+apt-get --yes install ca-certificates
+
+echo "Cleaning up the bootstrap configuration..."
+rm /etc/apt/apt.conf.d/90-apt-https.conf
+rm /etc/apt/isrg-root-x1-2015.crt
