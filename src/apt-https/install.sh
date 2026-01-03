@@ -9,12 +9,10 @@ sed --in-place s/http:/https:/g /etc/apt/sources.list.d/*.sources
 
 echo "Configuring certificate for the https transport..."
 cat > /etc/apt/apt.conf.d/90-apt-https.conf << EOF
-Acquire::https {
-     CAInfo "/etc/apt/isrg-root-x1-2015.crt";
-};
+Acquire::https::CAInfo "/etc/apt/isrg-root-x1-2015.crt";
 EOF
 
-cat > /etc/apt/isrg-root-x1-2015.crt << EOF
+cat > /etc/apt/isrg-x1-root-2015.crt << EOF
 -----BEGIN CERTIFICATE-----
 MIIFazCCA1OgAwIBAgIRAIIQz7DSQONZRGPgu2OCiwAwDQYJKoZIhvcNAQELBQAw
 TzELMAkGA1UEBhMCVVMxKTAnBgNVBAoTIEludGVybmV0IFNlY3VyaXR5IFJlc2Vh
@@ -47,3 +45,10 @@ mRGunUHBcnWEvgJBQl9nJEiU0Zsnvgc/ubhPgXRR4Xq37Z0j4r7g1SgEEzwxA57d
 emyPxgcYxn/eR44/KJ4EBs+lVDR3veyJm+kXQ99b21/+jh5Xos1AnX5iItreGCc=
 -----END CERTIFICATE-----
 EOF
+
+echo "Installing the Ubuntu certificates bundle..."
+apt install ca-certificates
+
+echo "Cleaning up bootstrap configuration..."
+rm /etc/apt/apt.conf.d/90-apt-https.conf
+rm /etc/apt/isrg-x1-root-2015.crt
