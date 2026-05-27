@@ -1,11 +1,10 @@
-
 # Sudo run-as (sudo-runas)
 
-Lets the named user execute the listed commands.
+Allows a user to execute listed commands as another user.
 
-This is just a convenience for adding an entry to the sudoers configuration.
-Basic "runas" syntax is "where = (as who) tags : command"; see the "user
-specification" section in the [sudo manual] for all the possibilities.
+This feature is a convenience wrapper that adds an entry to the sudoers
+configuration. The basic `runas` syntax is `where = (as who) tags : command`.
+See the "User Specification" section in the [sudo manual] for details.
 
 ## Example usage
 
@@ -24,9 +23,9 @@ specification" section in the [sudo manual] for all the possibilities.
 
 ## Common utilities
 
-This feature does not require the [common-utils] feature, but is configured to
-install after it, so that its [allow-all] sudoers default may be overridden.
+This feature does not require the [common-utils] feature, but it is configured
+to install afterward so that the [allow-all] sudoers entry can be overridden.
 
-[allow-all]: https://github.com/devcontainers/features/blob/main/src/common-utils/main.sh#L450
+[allow-all]: https://github.com/devcontainers/features/blob/main/src/common-utils/main.sh#L475
 [common-utils]: https://github.com/devcontainers/features/tree/main/src/common-utils
 [sudo manual]: https://manpages.ubuntu.com/manpages/questing/man5/sudoers-rs.5.html#sudoers%20file%20format

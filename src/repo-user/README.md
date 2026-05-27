@@ -1,18 +1,17 @@
-
 # Repository user (repo-user)
 
-Creates a user with the specified name and ids.
+Creates a user with the specified name and IDs.
 
 ## Example usage
 
 ```json
-"containerUser": "dev",
+"remoteUser": "dev",
 "updateRemoteUserUID": false,
 "features": {
     "ghcr.io/wrwrwr/devcont-feats/repo-user:0": {
         "name": "dev",
-        "userId: 1111,
-        "groupId": 1111
+        "userId": 1111,
+        "groupId": 1111,
         "shell": "/bin/bash"
     }
 }
@@ -20,8 +19,8 @@ Creates a user with the specified name and ids.
 
 ## Docker rootless
 
-If using docker rootless, `userId` and `groupId` should be set to the
-host ids minus subuid / subgid (100000 by default) plus 1, for example:
+If using Docker rootless, set `userId` and `groupId` to the host IDs minus
+the subuid/subgid offset (100000 by default) plus 1. For example:
 
 ```bash
 cat /etc/subuid
