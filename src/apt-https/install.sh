@@ -1,6 +1,6 @@
 #!/bin/sh
 
-set -o errexit
+set -o errexit -o nounset
 
 echo "Activating feature 'apt-https'..."
 
@@ -46,7 +46,7 @@ emyPxgcYxn/eR44/KJ4EBs+lVDR3veyJm+kXQ99b21/+jh5Xos1AnX5iItreGCc=
 -----END CERTIFICATE-----
 EOF
 
-echo "Installing the Ubuntu certificates bundle..."
+echo "Installing the ca-certificates package..."
 apt-get update
 apt-get --yes install ca-certificates
 

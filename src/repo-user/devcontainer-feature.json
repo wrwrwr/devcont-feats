@@ -1,7 +1,7 @@
 {
     "name": "Repo user",
     "id": "repo-user",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "description": "Creates a user with the specified name and ids.",
     "options": {
         "name": {

@@ -1,7 +1,7 @@
 {
     "name": "Sudo run-as",
     "id": "sudo-runas",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "description": "Lets the named user execute the listed commands.",
     "options": {
         "name": {
