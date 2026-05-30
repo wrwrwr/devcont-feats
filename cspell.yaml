@@ -1,0 +1,27 @@
+# yamllint disable-line rule:line-length
+$schema: https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json
+
+language: en
+
+userWords:
+  - ignore-user-settings
+
+ignorePaths:
+  - /.cache/CACHEDIR.TAG  # WA: Unable to parse cache.
+  - license.txt
+
+ignoreWords:
+  - cachedir
+  - commitizen
+  - devcont
+  - groupid
+  - jsonschema
+  - moby
+  - nopasswd
+  - runas
+  - schemafile
+  - shellcheck
+  - subgid
+  - subuid
+  - sudoedit
+  - wrwrwr

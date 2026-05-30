@@ -1,2 +1,9 @@
-/arch/
+/.cache/*
+!/.cache/CACHEDIR.TAG
+/.devcontainer/.bash_history
+/.devcontainer/devcontainer.local.json
+/.devcontainer/devcontainer-lock.json
+/_arch/
+/node_modules/
+/package-lock.json
 /todo.md

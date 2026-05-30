@@ -26,6 +26,6 @@ See the "User Specification" section in the [sudo manual] for details.
 This feature does not require the [common-utils] feature, but it is configured
 to install afterward so that the [allow-all] sudoers entry can be overridden.
 
-[allow-all]: https://github.com/devcontainers/features/blob/main/src/common-utils/main.sh#L475
+[allow-all]: https://github.com/devcontainers/features/blob/72df8a5f191f840a66dc2e2ced10a136e4d75173/src/common-utils/main.sh#L475
 [common-utils]: https://github.com/devcontainers/features/tree/main/src/common-utils
 [sudo manual]: https://manpages.ubuntu.com/manpages/questing/man5/sudoers-rs.5.html#sudoers%20file%20format

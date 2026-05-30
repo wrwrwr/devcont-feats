@@ -8,7 +8,13 @@
 [repo-user]: src/repo-user
 [sudo-runas]: src/sudo-runas
 
-# Notes and license
+## Usage
 
-Assisted: Documentation review and fixes by the Claude Haiku 4.5 / GPT-5 mini.
-License: MIT
+Add to `.devcontainer/devcontainer.json` under `features`.
+Some of the features also require adding `overrideFeatureInstallOrder`.
+
+## Notes
+
+**License**: MIT\
+**Assisted**: Project setup updates, documentation review and fixes
+by the VS Code agent (Claude Haiku 4.5 / GPT-5 mini).
