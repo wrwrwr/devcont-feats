@@ -2,7 +2,7 @@
 
 set -o errexit -o nounset
 
-echo "Activating feature 'repo-user'..."
+echo "Activating feature 'add-user'..."
 
 if getent passwd "$NAME"; then
     echo "User with name '$NAME' already exists."
