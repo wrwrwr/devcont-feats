@@ -1,8 +1,8 @@
 {
     "name": "Add user",
     "id": "add-user",
-    "version": "0.0.1",
-    "description": "Creates a user with the specified name and ids.",
+    "version": "0.0.2",
+    "description": "Creates a user with the specified name and id.",
     "options": {
         "name": {
             "type": "string",
@@ -10,8 +10,8 @@
                 "dev",
                 "devcont"
             ],
-            "default": "dev",
-            "description": "In-container user name."
+            "default": "",
+            "description": "New user name; 'remoteUser' by default."
         },
         "userId": {
             "type": "string",
@@ -20,25 +20,7 @@
                 "1234"
             ],
             "default": "1111",
-            "description": "In-container user id."
-        },
-        "groupId": {
-            "type": "string",
-            "proposals": [
-                "1111",
-                "1234"
-            ],
-            "default": "1111",
-            "description": "In-container group id."
-        },
-        "shell": {
-            "type": "string",
-            "proposals": [
-                "/bin/bash",
-                "/bin/zsh"
-            ],
-            "default": "/bin/bash",
-            "description": "Login shell (not auto-installed)."
+            "description": "New user/group id; match mounts in-container id."
         }
     }
 }

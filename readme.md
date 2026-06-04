@@ -1,6 +1,6 @@
 # Devcontainer features
 
-* [add-user]: Creates a user with the specified name and ids.
+* [add-user]: Creates a user with the specified name and id.
 * [apt-https]: Bootstraps HTTPS transport without using HTTP.
 * [sudo-runas]: Allows a user to execute listed commands as another user.
 
