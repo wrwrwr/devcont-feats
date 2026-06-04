@@ -1,7 +1,7 @@
 {
     "name": "Add user",
     "id": "add-user",
-    "version": "0.0.1",
+    "version": "0.0.4",
     "description": "Creates a user with the specified name and ids.",
     "options": {
         "name": {
@@ -10,8 +10,8 @@
                 "dev",
                 "devcont"
             ],
-            "default": "dev",
-            "description": "In-container user name."
+            "default": "",
+            "description": "New user name; 'remoteUser' by default."
         },
         "userId": {
             "type": "string",
@@ -20,7 +20,7 @@
                 "1234"
             ],
             "default": "1111",
-            "description": "In-container user id."
+            "description": "New user id (match in-container mounts uid)."
         },
         "groupId": {
             "type": "string",
@@ -28,8 +28,8 @@
                 "1111",
                 "1234"
             ],
-            "default": "1111",
-            "description": "In-container group id."
+            "default": "",
+            "description": "New group id; 'userId' by default."
         },
         "shell": {
             "type": "string",
