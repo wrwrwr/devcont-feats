@@ -1,6 +1,9 @@
 name: Update packages
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
 
 jobs:
   main:
@@ -11,7 +14,7 @@ jobs:
       packages: write
     steps:
       - name: Check out code
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
 
       - name: Publish packages
         uses: devcontainers/action@v1
