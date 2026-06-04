@@ -17,6 +17,9 @@ Creates a home directory, does not install a shell or add sudoers entries.
 }
 ```
 
+If the user to create is the main workspace user, then the feature
+must run before other features that depend on the ids of the user:
+
 ```json
 "remoteUser": "dev",
 "updateRemoteUserUID": false,
@@ -24,5 +27,8 @@ Creates a home directory, does not install a shell or add sudoers entries.
     "ghcr.io/wrwrwr/devcont-feats/add-user:0": {
         "userId": 1111
     }
-}
+},
+"overrideFeatureInstallOrder": [
+    "ghcr.io/wrwrwr/devcont-feats/add-user"
+]
 ```
