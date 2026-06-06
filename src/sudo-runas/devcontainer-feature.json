@@ -1,30 +1,145 @@
 {
     "name": "Sudo run-as",
     "id": "sudo-runas",
-    "version": "0.0.1",
-    "description": "Lets the named user execute the listed commands.",
+    "version": "0.0.2",
+    "description": "Allows a user to execute a command as another user.",
     "options": {
-        "name": {
+        "invoker": {
             "type": "string",
             "proposals": [
                 "ubuntu",
                 "dev"
             ],
-            "default": "ubuntu",
-            "description": "In-container user name."
+            "default": "",
+            "description": "The user to be allowed; 'remoteUser' by default."
         },
-        "runas": {
+        "executor": {
             "type": "string",
             "proposals": [
-                "ALL = (root) NOPASSWD: ALL",
-                "ALL = (root) NOPASSWD: sudoedit /etc/hosts",
-                "ALL = (root) NOPASSWD: /usr/bin/apt update, /usr/bin/apt install zsh"
+                "root",
+                "postgres"
             ],
-            "default": "",
-            "description": "Allowed commands (a sudoers entry)."
+            "default": "root",
+            "description": "The user to delegate to (sudo --user <user>)."
+        },
+        "command": {
+            "type": "string",
+            "proposals": [
+                "/usr/bin/apt install zsh",
+                "/usr/sbin/service postgresql start",
+                "/usr/sbin/update-ca-certificates \\\"\\\"",
+                "/install-tools.sh",
+                "/sys-scripts/"
+            ],
+            "default": ""
+        },
+        "invoker1": {
+            "type": "string",
+            "default": ""
+        },
+        "executor1": {
+            "type": "string",
+            "default": "root"
+        },
+        "command1": {
+            "type": "string",
+            "default": ""
+        },
+        "invoker2": {
+            "type": "string",
+            "default": ""
+        },
+        "executor2": {
+            "type": "string",
+            "default": "root"
+        },
+        "command2": {
+            "type": "string",
+            "default": ""
+        },
+        "invoker3": {
+            "type": "string",
+            "default": ""
+        },
+        "executor3": {
+            "type": "string",
+            "default": "root"
+        },
+        "command3": {
+            "type": "string",
+            "default": ""
+        },
+        "invoker4": {
+            "type": "string",
+            "default": ""
+        },
+        "executor4": {
+            "type": "string",
+            "default": "root"
+        },
+        "command4": {
+            "type": "string",
+            "default": ""
+        },
+        "invoker5": {
+            "type": "string",
+            "default": ""
+        },
+        "executor5": {
+            "type": "string",
+            "default": "root"
+        },
+        "command5": {
+            "type": "string",
+            "default": ""
+        },
+        "invoker6": {
+            "type": "string",
+            "default": ""
+        },
+        "executor6": {
+            "type": "string",
+            "default": "root"
+        },
+        "command6": {
+            "type": "string",
+            "default": ""
+        },
+        "invoker7": {
+            "type": "string",
+            "default": ""
+        },
+        "executor7": {
+            "type": "string",
+            "default": "root"
+        },
+        "command7": {
+            "type": "string",
+            "default": ""
+        },
+        "invoker8": {
+            "type": "string",
+            "default": ""
+        },
+        "executor8": {
+            "type": "string",
+            "default": "root"
+        },
+        "command8": {
+            "type": "string",
+            "default": ""
+        },
+        "invoker9": {
+            "type": "string",
+            "default": ""
+        },
+        "executor9": {
+            "type": "string",
+            "default": "root"
+        },
+        "command9": {
+            "type": "string",
+            "default": ""
         }
-    },
-    "installsAfter": [
-        "ghcr.io/devcontainers/features/common-utils"
-    ]
+    }
 }

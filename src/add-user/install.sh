@@ -4,7 +4,7 @@ set -o errexit -o nounset
 
 echo "Activating feature 'add-user'..."
 
-if getent passwd "${NAME:=$_REMOTE_USER}"; then
+if getent passwd "${NAME:="$_REMOTE_USER"}"; then
     echo "User with name '$NAME' already exists."
     exit 1
 fi
@@ -12,7 +12,7 @@ if getent passwd "$USERID"; then
     echo "User with id $USERID already exists."
     exit 1
 fi
-if getent group "${GROUPID:=$USERID}"; then
+if getent group "${GROUPID:="$USERID"}"; then
     echo "Group with id $GROUPID already exists."
     exit 1
 fi

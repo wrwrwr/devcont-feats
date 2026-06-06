@@ -12,6 +12,7 @@ ignorePaths:
 
 ignoreWords:
   - cachedir
+  - cmnd
   - commitizen
   - devcont
   - groupid

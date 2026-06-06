@@ -2,7 +2,7 @@
 
 * [add-user]: Creates a user with the specified name and ids.
 * [apt-https]: Bootstraps HTTPS transport without using HTTP.
-* [sudo-runas]: Allows a user to execute listed commands as another user.
+* [sudo-runas]: Allows a user to execute a command as another user.
 
 [add-user]: src/add-user
 [apt-https]: src/apt-https
