@@ -5,5 +5,5 @@
 /.devcontainer/devcontainer-lock.json
 /_arch/
 /node_modules/
+/notes.md
 /package-lock.json
-/todo.md
