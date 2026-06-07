@@ -49,6 +49,7 @@ EOF
 echo "Installing the ca-certificates package..."
 apt-get update
 apt-get --yes install ca-certificates
+apt-get clean
 
 echo "Cleaning up the bootstrap configuration..."
 rm /etc/apt/apt.conf.d/90-apt-https.conf
