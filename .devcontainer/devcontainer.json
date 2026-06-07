@@ -4,13 +4,11 @@
         "ghcr.io/devcontainers-extra/features/apt-packages:1": {
             "packages": "git,npm"
         },
-        "ghcr.io/devcontainers-extra/features/pre-commit:2": {}
-    },
-    "onCreateCommand": {
-        "install-devcont-cli": "npm install --no-save @devcontainers/cli "
+        "ghcr.io/devcontainers-extra/features/prek:1": {}
     },
     "postStartCommand": {
-        "init-precommit-envs": "pre-commit install-hooks"
+        "init-prek-environs": "prek install-hooks",
+        "install-devcont-cli": "npm install --no-save @devcontainers/cli"
     },
     "remoteEnv": {
         "PATH": "${containerEnv:PATH}:/usr/local/py-utils/bin:${containerWorkspaceFolder}/node_modules/.bin"

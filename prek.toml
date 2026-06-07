@@ -1,0 +1,122 @@
+#:schema https://www.schemastore.org/prek.json
+
+default_install_hook_types = []
+default_stages = ["manual", "pre-commit", "pre-push"]
+
+[[repos]]
+repo = "meta"
+hooks = [
+  { id = "check-hooks-apply" },
+  { id = "check-useless-excludes" }
+]
+
+[[repos]]
+repo = "https://github.com/pre-commit/pre-commit-hooks"
+rev = "v6.0.0"
+hooks = [
+  { id = "check-added-large-files" },
+  { id = "check-case-conflict" },
+  { id = "check-executables-have-shebangs" },
+  { id = "check-illegal-windows-names" },
+  { id = "check-merge-conflict" },
+  { id = "check-shebang-scripts-are-executable" },
+  { id = "check-vcs-permalinks" },
+  { id = "end-of-file-fixer" },
+  { id = "fix-byte-order-marker" },
+  { id = "mixed-line-ending" },
+  { id = "trailing-whitespace" }
+]
+
+[[repos]]
+repo = "https://github.com/gitleaks/gitleaks"
+rev = "v8.30.0"
+hooks = [
+  { id = "gitleaks" }
+]
+
+[[repos]]
+repo = "https://github.com/DavidAnson/markdownlint-cli2"
+rev = "v0.22.1"
+hooks = [
+  { id = "markdownlint-cli2" }
+]
+
+[[repos]]
+repo = "https://github.com/adrienverge/yamllint"
+rev = "v1.38.0"
+hooks = [
+  {
+    id = "yamllint",
+    args = [
+      "--strict",
+      "--config-data",
+      """
+extends: default
+rules:
+  document-start: disable
+  truthy: {check-keys: false}
+"""
+    ]
+  }
+]
+
+[[repos]]
+repo = "https://github.com/python-jsonschema/check-jsonschema"
+rev = "0.37.2"
+hooks = [
+  {
+    id = "check-jsonschema",
+    args = [
+      "--schemafile",
+      "https://raw.githubusercontent.com/devcontainers/spec/refs/heads/main/schemas/devContainerFeature.schema.json"
+    ],
+    files = "devcontainer-feature.json$"
+  }
+]
+
+[[repos]]
+repo = "https://github.com/shellcheck-py/shellcheck-py"
+rev = "v0.11.0.1"
+hooks = [
+  { id = "shellcheck" }
+]
+
+[[repos]]
+repo = "https://github.com/streetsidesoftware/cspell-cli"
+rev = "v10.0.0"
+hooks = [
+  {
+    id = "cspell",
+    args = [
+      "--no-must-find-files",
+      "--no-progress",
+      "--no-summary",
+      "--gitignore",
+      "--cache",
+      "--cache-location=.cache/cspell.json",
+      "--files"
+    ],
+    stages = ["commit-msg", "manual", "pre-commit", "pre-push"]
+  }
+]
+
+[[repos]]
+repo = "https://github.com/commitizen-tools/commitizen"
+rev = "v4.16.3"
+hooks = [
+  {
+    id = "commitizen",
+    stages = ["commit-msg"]
+  },
+  {
+    id = "commitizen-branch",
+    stages = ["pre-push"]
+  }
+]
+
+[[repos]]
+repo = "https://github.com/rhysd/actionlint"
+rev = "v1.7.12"
+hooks = [
+  { id = "actionlint" }
+]
