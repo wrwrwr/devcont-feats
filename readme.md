@@ -1,10 +1,13 @@
 # Devcontainer features
 
+A couple of custom features for [devcontainers]:
+
 * [add-user]: Creates a user with the specified name and ids.
 * [apt-https]: Bootstraps HTTPS transport without using HTTP.
 * [apt-get]: Installs packages assuming apt is available.
 * [sudo-runas]: Allows a user to execute a command as another user.
 
+[devcontainers]: https://containers.dev/
 [add-user]: src/add-user
 [apt-https]: src/apt-https
 [apt-get]: src/apt-get
@@ -12,8 +15,10 @@
 
 ## Usage
 
-Add to `.devcontainer/devcontainer.json` under `features`.
-Some of the features also require adding `overrideFeatureInstallOrder`.
+Add to `.devcontainer/devcontainer.json` under `features`.\
+Some of the features also require `overrideFeatureInstallOrder`.
+
+Only tested with Ubuntu, but might work with other Debian variants.
 
 ## Notes
 

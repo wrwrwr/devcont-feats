@@ -2,8 +2,8 @@
 
 Bootstraps HTTPS transport without using HTTP.
 
-This feature should usually be ordered before all other features.
-It may be useful for configuring `apt` in HTTPS-only networks.
+This feature may be useful for enabling `apt` in HTTPS-only networks.\
+It should usually be ordered before all other features.
 
 ## Example usage
 

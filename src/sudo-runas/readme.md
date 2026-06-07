@@ -57,12 +57,12 @@ Note that commands with wildcards, negation, arbitrary arguments (no ""), and
 the `sudoedit` built-in may be equivalent to `ALL` due to various tricks.
 
 Moreover, the no-arguments marker needs to use double quotes, and these need
-to be double-escaped due to shell expansions: `"/usr/bin/tee \\\"\\\"`.
+to be double-escaped due to shell expansions: `"/usr/bin/tee \\\"\\\""`.
 
 ## Common utilities
 
 The [common-utils] feature adds an [allow-all] entry if the `containerUser` or
-`remoteUser` is customized, so you may want to use some other feature instead.
+`remoteUser` is customized, this is not overwritten.
 
 [allow-all]: https://github.com/devcontainers/features/blob/72df8a5f191f840a66dc2e2ced10a136e4d75173/src/common-utils/main.sh#L475
 [common-utils]: https://github.com/devcontainers/features/tree/main/src/common-utils
