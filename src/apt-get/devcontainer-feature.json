@@ -1,0 +1,17 @@
+{
+    "name": "Minimal apt-get",
+    "id": "apt-get",
+    "version": "0.0.1",
+    "description": "Installs packages assuming apt is available.",
+    "options": {
+        "name": {
+            "type": "string",
+            "proposals": [
+                "git",
+                "git,sudo"
+            ],
+            "default": "",
+            "description": "Comma-separated of package names."
+        }
+    }
+}
