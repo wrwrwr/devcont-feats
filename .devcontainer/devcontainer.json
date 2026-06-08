@@ -1,7 +1,7 @@
 {
     "image": "ubuntu:26.04",
     "features": {
-        "ghcr.io/wrwrwr/devcont-feats/apt-get:0": {
+        "ghcr.io/wrwrwr/devcont-feats/apt-install:0": {
             "packages": "git,npm"
         },
         "ghcr.io/devcontainers-extra/features/prek:1": {}

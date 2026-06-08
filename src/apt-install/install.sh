@@ -2,7 +2,7 @@
 
 set -o errexit -o nounset
 
-echo "Activating feature 'apt-get'..."
+echo "Activating feature 'apt-install'..."
 
 apt-get update
 # shellcheck disable=2046  # package names

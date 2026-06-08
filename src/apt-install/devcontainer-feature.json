@@ -1,7 +1,7 @@
 {
-    "name": "Minimal apt-get",
-    "id": "apt-get",
-    "version": "0.0.2",
+    "name": "Minimal apt-install",
+    "id": "apt-install",
+    "version": "0.0.3",
     "description": "Installs packages assuming apt is available.",
     "options": {
         "name": {

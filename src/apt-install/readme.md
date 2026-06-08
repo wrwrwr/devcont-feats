@@ -1,4 +1,4 @@
-# Minimal apt-get (apt-get)
+# Minimal apt-install (apt-install)
 
 Installs packages assuming apt is available.
 
@@ -10,7 +10,7 @@ Clears caches, but not lists. Skips recommended and suggested packages[^1].
 
 ```json
 "features": {
-    "ghcr.io/wrwrwr/devcont-feats/apt-get:0": {
+    "ghcr.io/wrwrwr/devcont-feats/apt-install:0": {
         "packages": "git,sudo"
     }
 }
