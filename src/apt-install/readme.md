@@ -1,4 +1,4 @@
-# Minimal apt-install (apt-install)
+# Install using APT (apt-install)
 
 Installs packages assuming apt is available.
 

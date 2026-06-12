@@ -46,9 +46,10 @@ emyPxgcYxn/eR44/KJ4EBs+lVDR3veyJm+kXQ99b21/+jh5Xos1AnX5iItreGCc=
 -----END CERTIFICATE-----
 EOF
 
+export DEBIAN_FRONTEND=noninteractive
+
 echo "Installing the ca-certificates package..."
-apt-get update
-apt-get --yes install ca-certificates
+apt-get --yes install --update ca-certificates
 apt-get clean
 
 echo "Cleaning up the bootstrap configuration..."
