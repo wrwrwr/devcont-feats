@@ -19,6 +19,7 @@ ignoreWords:
   - jsonschema
   - moby
   - nopasswd
+  - pipx
   - prek
   - runas
   - schemafile
