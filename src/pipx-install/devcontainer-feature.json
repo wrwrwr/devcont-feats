@@ -1,0 +1,20 @@
+{
+    "name": "Install using pipx",
+    "id": "pipx-install",
+    "version": "0.0.1",
+    "description": "Installs Python tools assuming pipx is available.",
+    "options": {
+        "packages": {
+            "type": "string",
+            "proposals": [
+                "cowsay",
+                "prek,uv"
+            ],
+            "default": "",
+            "description": "Comma-separated list of package names."
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/wrwrwr/devcont-feats/apt-install"
+    ]
+}

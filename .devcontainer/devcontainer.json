@@ -2,9 +2,11 @@
     "image": "ubuntu:26.04",
     "features": {
         "ghcr.io/wrwrwr/devcont-feats/apt-install:0": {
-            "packages": "git,npm"
+            "packages": "git,npm,pipx"
         },
-        "ghcr.io/devcontainers-extra/features/prek:1": {}
+        "ghcr.io/wrwrwr/devcont-feats/pipx-install:0": {
+            "packages": "prek"
+        }
     },
     "postStartCommand": {
         "init-prek-environs": "prek install-hooks",

@@ -14,11 +14,14 @@ ignoreWords:
   - cachedir
   - cmnd
   - commitizen
+  - cowsay
   - devcont
+  - fonttools
   - groupid
   - jsonschema
   - moby
   - nopasswd
+  - pipx
   - prek
   - runas
   - schemafile
