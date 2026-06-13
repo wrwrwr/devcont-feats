@@ -1,0 +1,20 @@
+{
+    "name": "Install using corepack",
+    "id": "corepack-install",
+    "version": "0.0.1",
+    "description": "Installs a package manager assuming corepack is available.",
+    "options": {
+        "managers": {
+            "type": "string",
+            "proposals": [
+                "npm",
+                "npm,pnpm,yarn"
+            ],
+            "default": "",
+            "description": "Comma-separated list of package managers."
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/wrwrwr/devcont-feats/apt-install"
+    ]
+}

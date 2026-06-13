@@ -2,7 +2,10 @@
     "image": "ubuntu:26.04",
     "features": {
         "ghcr.io/wrwrwr/devcont-feats/apt-install:0": {
-            "packages": "git,npm,pipx"
+            "packages": "git,node-corepack,pipx"
+        },
+        "ghcr.io/wrwrwr/devcont-feats/corepack-install:0": {
+            "managers": "npm"
         },
         "ghcr.io/wrwrwr/devcont-feats/pipx-install:0": {
             "packages": "prek"

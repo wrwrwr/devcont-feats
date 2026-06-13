@@ -8,6 +8,9 @@ Installs globally (`/opt/pipx`), using the system's Python version.
 
 ```json
 "features": {
+    "ghcr.io/wrwrwr/devcont-feats/apt-install:0": {
+        "packages": "pipx"
+    },
     "ghcr.io/wrwrwr/devcont-feats/pipx-install:0": {
         "packages": "fonttools,prek"
     }
