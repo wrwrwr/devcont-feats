@@ -1,7 +1,7 @@
 {
     "name": "Install using corepack",
     "id": "corepack-install",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Installs a package manager assuming corepack is available.",
     "options": {
         "managers": {
@@ -15,6 +15,7 @@
         }
     },
     "installsAfter": [
+        "ghcr.io/wrwrwr/devcont-feats/add-user",
         "ghcr.io/wrwrwr/devcont-feats/apt-install"
     ]
 }

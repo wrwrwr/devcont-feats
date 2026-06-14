@@ -1,7 +1,7 @@
 {
     "name": "Sudo run-as",
     "id": "sudo-runas",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "Allows a user to execute a command as another user.",
     "options": {
         "invoker": {
@@ -141,5 +141,8 @@
             "type": "string",
             "default": ""
         }
-    }
+    },
+    "installsAfter": [
+        "ghcr.io/wrwrwr/devcont-feats/add-user"
+    ]
 }

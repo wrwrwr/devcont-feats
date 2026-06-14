@@ -1,7 +1,7 @@
 {
     "name": "Install using APT",
     "id": "apt-install",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "description": "Installs packages assuming apt is available.",
     "options": {
         "name": {
@@ -13,5 +13,8 @@
             "default": "",
             "description": "Comma-separated list of package names."
         }
-    }
+    },
+    "installsAfter": [
+        "ghcr.io/wrwrwr/devcont-feats/apt-https"
+    ]
 }
