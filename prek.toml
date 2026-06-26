@@ -3,6 +3,9 @@
 default_install_hook_types = []
 default_stages = ["manual", "pre-commit", "pre-push"]
 
+[auto_update]
+cooldown_days = 3
+
 [[repos]]
 repo = "meta"
 hooks = [
@@ -29,9 +32,28 @@ hooks = [
 
 [[repos]]
 repo = "https://github.com/gitleaks/gitleaks"
-rev = "v8.30.0"
+rev = "v8.30.1"
 hooks = [
   { id = "gitleaks" }
+]
+
+[[repos]]
+repo = "https://github.com/streetsidesoftware/cspell-cli"
+rev = "v10.0.1"
+hooks = [
+  {
+    id = "cspell",
+    args = [
+      "--no-must-find-files",
+      "--no-progress",
+      "--no-summary",
+      "--gitignore",
+      "--cache",
+      "--cache-location=.cache/cspell.json",
+      "--files"
+    ],
+    stages = ["commit-msg", "manual", "pre-commit", "pre-push"]
+  }
 ]
 
 [[repos]]
@@ -62,13 +84,14 @@ rules:
 
 [[repos]]
 repo = "https://github.com/python-jsonschema/check-jsonschema"
-rev = "0.37.2"
+rev = "0.37.3"
 hooks = [
   {
     id = "check-jsonschema",
+    additional_dependencies = ["json5"],
     args = [
-      "--schemafile",
-      "https://raw.githubusercontent.com/devcontainers/spec/refs/heads/main/schemas/devContainerFeature.schema.json"
+      "--force-filetype=json5",
+      "--schemafile=https://raw.githubusercontent.com/devcontainers/spec/refs/heads/main/schemas/devContainerFeature.schema.json"
     ],
     files = "devcontainer-feature.json$"
   }
@@ -82,27 +105,8 @@ hooks = [
 ]
 
 [[repos]]
-repo = "https://github.com/streetsidesoftware/cspell-cli"
-rev = "v10.0.0"
-hooks = [
-  {
-    id = "cspell",
-    args = [
-      "--no-must-find-files",
-      "--no-progress",
-      "--no-summary",
-      "--gitignore",
-      "--cache",
-      "--cache-location=.cache/cspell.json",
-      "--files"
-    ],
-    stages = ["commit-msg", "manual", "pre-commit", "pre-push"]
-  }
-]
-
-[[repos]]
 repo = "https://github.com/commitizen-tools/commitizen"
-rev = "v4.16.3"
+rev = "v4.16.4"
 hooks = [
   {
     id = "commitizen",

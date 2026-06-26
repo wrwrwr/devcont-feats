@@ -12,7 +12,7 @@
         }
     },
     "postStartCommand": {
-        "init-prek-environs": "prek install-hooks",
+        "prepare-prek-hooks": "prek prepare-hooks",
         "install-devcont-cli": "npm install --no-save @devcontainers/cli"
     },
     "remoteEnv": {

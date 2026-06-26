@@ -14,6 +14,7 @@ ignoreWords:
   - cachedir
   - cmnd
   - commitizen
+  - cooldown
   - cowsay
   - devcont
   - fonttools
