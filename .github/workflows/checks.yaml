@@ -1,0 +1,23 @@
+name: Check code
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v7
+
+      - name: Cache tool results
+        uses: actions/cache@v6
+        with:
+          path: .cache
+          key: results-cache
+
+      - name: Run lints and tests
+        uses: j178/prek-action@v2

@@ -1,8 +1,8 @@
 /.cache/*
 !/.cache/CACHEDIR.TAG
 /.devcontainer/.bash_history
-/.devcontainer/devcontainer.local.json
-/.devcontainer/devcontainer-lock.json
+/.devcontainer/devcontainer-local/
+/.devcontainer/devcontainer-local.json
 /_arch/
 /node_modules/
 /notes.md
