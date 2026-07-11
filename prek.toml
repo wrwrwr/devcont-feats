@@ -58,7 +58,7 @@ hooks = [
 
 [[repos]]
 repo = "https://github.com/DavidAnson/markdownlint-cli2"
-rev = "v0.22.1"
+rev = "v0.23.0"
 hooks = [
   { id = "markdownlint-cli2" }
 ]
@@ -84,7 +84,7 @@ rules:
 
 [[repos]]
 repo = "https://github.com/python-jsonschema/check-jsonschema"
-rev = "0.37.3"
+rev = "0.37.4"
 hooks = [
   {
     id = "check-jsonschema",
