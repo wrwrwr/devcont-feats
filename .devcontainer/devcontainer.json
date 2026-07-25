@@ -1,21 +1,21 @@
 {
-    "image": "ubuntu:26.04",
-    "features": {
-        "ghcr.io/wrwrwr/devcont-feats/apt-install:0": {
-            "packages": "git,node-corepack,pipx"
-        },
-        "ghcr.io/wrwrwr/devcont-feats/corepack-install:0": {
-            "managers": "npm@11"
-        },
-        "ghcr.io/wrwrwr/devcont-feats/pipx-install:0": {
-            "packages": "prek"
-        }
+  "image": "ubuntu:26.04",
+  "features": {
+    "ghcr.io/wrwrwr/devcont-feats/apt-install:0": {
+      "packages": "git,node-corepack,pipx"
     },
-    "postStartCommand": {
-        "prepare-prek-hooks": "prek prepare-hooks",
-        "install-devcont-cli": "npm install --no-save @devcontainers/cli"
+    "ghcr.io/wrwrwr/devcont-feats/corepack-install:0": {
+      "managers": "npm@11"
     },
-    "remoteEnv": {
-        "PATH": "${containerEnv:PATH}:${containerWorkspaceFolder}/node_modules/.bin"
+    "ghcr.io/wrwrwr/devcont-feats/pipx-install:0": {
+      "packages": "prek"
     }
+  },
+  "postStartCommand": {
+    "install-devcont-cli": "npm install --no-save @devcontainers/cli",
+    "prepare-prek-hooks": "prek prepare-hooks"
+  },
+  "remoteEnv": {
+    "PATH": "${containerEnv:PATH}:${containerWorkspaceFolder}/node_modules/.bin"
+  }
 }
