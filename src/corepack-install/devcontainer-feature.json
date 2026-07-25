@@ -1,7 +1,7 @@
 {
     "name": "Install using corepack",
     "id": "corepack-install",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "Installs a package manager assuming corepack is available.",
     "options": {
         "managers": {

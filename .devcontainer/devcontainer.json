@@ -5,7 +5,7 @@
             "packages": "git,node-corepack,pipx"
         },
         "ghcr.io/wrwrwr/devcont-feats/corepack-install:0": {
-            "managers": "npm"
+            "managers": "npm@11"
         },
         "ghcr.io/wrwrwr/devcont-feats/pipx-install:0": {
             "packages": "prek"

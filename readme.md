@@ -29,5 +29,6 @@ Only tested with Ubuntu, but might work with other Debian variants.
 ## Notes
 
 **License**: MIT\
+**Status**: Experimental (only tested with Ubuntu)\
 **Assisted**: Project setup updates, documentation review and fixes
 by the VS Code agent (Claude Haiku 4.5 / GPT-5 mini).
