@@ -1,6 +1,6 @@
 # Add user (add-user)
 
-Creates a user with the specified name and ids.
+Creates a user with the specified name and IDs.
 
 Creates a home directory, does not install a shell or add sudoers entries.
 

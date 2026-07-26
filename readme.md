@@ -1,8 +1,8 @@
 # Dev Containers Features
 
-A couple of custom features for [devcontainers]:
+A small set of custom features for [devcontainers]:
 
-* [add-user]: Creates a user with the specified name and ids.
+* [add-user]: Creates a user with the specified name and IDs.
 * [apt-https]: Bootstraps HTTPS transport without using HTTP.
 * [apt-install]: Installs packages assuming apt is available.
 * [corepack-install]: Installs a package manager assuming corepack is available.
@@ -20,15 +20,13 @@ A couple of custom features for [devcontainers]:
 ## Usage
 
 Add to `.devcontainer/devcontainer.json` under `features`.
+
 Some of the features need to be sorted before all other using
 `overrideFeatureInstallOrder` and some depend on `apt-install`
 with a base package.
-
-Only tested with Ubuntu, but might work with other Debian variants.
 
 ## Notes
 
 **License**: MIT\
 **Status**: Experimental (only tested with Ubuntu)\
-**Assisted**: Project setup updates, documentation review and fixes
-by the VS Code Chat.
+**Assisted**: Project setup updates, code reviews and fixes by VS Code Chat

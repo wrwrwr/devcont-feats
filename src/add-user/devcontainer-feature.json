@@ -2,7 +2,7 @@
     "name": "Add user",
     "id": "add-user",
     "version": "0.0.6",
-    "description": "Creates a user with the specified name and ids.",
+    "description": "Creates a user with the specified name and IDs.",
     "options": {
         "name": {
             "type": "string",
