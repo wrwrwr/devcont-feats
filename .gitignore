@@ -3,6 +3,9 @@
 /.devcontainer/.bash_history
 /.devcontainer/devcontainer-local/
 /.devcontainer/devcontainer-local.json
+/.vale/*
+!/.vale/config
+!/.vale/vale.ini
 /_arch/
 /node_modules/
 /notes.md

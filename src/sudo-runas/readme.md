@@ -38,6 +38,7 @@ To add more commands, suffix option names with 1..9:
 
 ## Command syntax
 
+<!-- vale off -->
 > A simple file name allows the user to run the command with any arguments
 > they wish. However, you may also specify command line arguments that have
 > to be used, in which case the command line has to match exactly. You can
@@ -52,12 +53,13 @@ To add more commands, suffix option names with 1..9:
 > Cmnd must match exactly those given by the user on the command line. Note
 > that the following characters must be escaped with a ‘\’ if they are used
 > in command arguments: ‘,’, ‘:’, ‘=’, ‘\’. (...)
+<!-- vale on -->
 
-Note that commands with wildcards, negation, arbitrary arguments (no ""), and
-the `sudoedit` built-in may be equivalent to `ALL` due to various tricks.
+You may want to avoid the `sudoedit` built-in, wildcards, negation and
+arbitrary arguments (no ""), as these may allow more than it would seem.
 
-Moreover, the no-arguments marker needs to use double quotes, and these need
-to be double-escaped due to shell expansions: `"/usr/bin/tee \\\"\\\""`.
+The no-arguments marker needs to use double quotes, and these need to be
+double-escaped due to shell expansions: `"/usr/bin/tee \\\"\\\""`.
 
 ## Common utilities
 

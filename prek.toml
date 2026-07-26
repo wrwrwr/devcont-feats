@@ -64,6 +64,44 @@ hooks = [
 ]
 
 [[repos]]
+repo = 'https://github.com/vale-cli/vale'
+rev = 'v3.15.2'
+hooks = [
+  {
+    id = 'vale',
+    name = 'sync vale packages',
+    args = ['--config=.vale/vale.ini', 'sync'],
+    pass_filenames = false
+  },
+  {
+    id = 'vale',
+    name = 'check writing',
+    shell = 'bash',
+    # Print files for parsing errors and fail on warnings/suggestions.
+    entry = '''
+      output="$(vale --config=.vale/vale.ini $@ 2>&1 || :)"
+      if [[ "$output" =~ E[0-9]+ ]]; then
+        printf "\n\e[4m%s\e[0m\n\n%s" "$*" "$output"
+        exit 1
+      fi
+      pattern='[1-9][0-9]*\s(error|warning|suggestion)'
+      if [[ "$output" =~ $pattern ]]; then
+        echo "$output"
+        exit 1
+      fi
+    ''',
+    # F: Vale 3.15: Comments in .json and multiline inline tables in .toml.
+    exclude = {
+      glob = [
+        '.devcontainer/devcontainer.json',
+        'license.txt',
+        'prek.toml'
+      ]
+    }
+  }
+]
+
+[[repos]]
 repo = 'https://github.com/DavidAnson/markdownlint-cli2'
 rev = "v0.23.1"
 hooks = [

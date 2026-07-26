@@ -2,7 +2,8 @@
   "image": "ubuntu:26.04",
   "features": {
     "ghcr.io/wrwrwr/devcont-feats/apt-install:0": {
-      "packages": "git,node-corepack,pipx"
+      // build-essential is needed for vale/go-tree-sitter
+      "packages": "build-essential,git,node-corepack,pipx"
     },
     "ghcr.io/wrwrwr/devcont-feats/corepack-install:0": {
       "managers": "npm@11"

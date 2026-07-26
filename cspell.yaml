@@ -3,31 +3,13 @@ $schema: https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell
 
 language: en
 
-userWords:
-  - ignore-user-settings
+userWords: [ignore-user-settings]
+
+dictionaries: [project]
+dictionaryDefinitions:
+  - name: project
+    path: .vale/config/vocabularies/project/accept.txt
 
 ignorePaths:
   - /.cache/CACHEDIR.TAG  # WA: Unable to parse cache.
   - license.txt
-
-ignoreWords:
-  - cachedir
-  - cmnd
-  - commitizen
-  - cooldown
-  - cowsay
-  - devcont
-  - fonttools
-  - groupid
-  - jsonschema
-  - moby
-  - nopasswd
-  - pipx
-  - prek
-  - runas
-  - schemafile
-  - shellcheck
-  - subgid
-  - subuid
-  - sudoedit
-  - wrwrwr

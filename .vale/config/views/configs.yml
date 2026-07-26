@@ -1,0 +1,21 @@
+engine: dasel
+scopes:
+  - name: description
+    expr: ..description
+
+  - name: display-name
+    expr: ..displayName
+
+  - name: markdown-description
+    expr: ..markdownDescription
+    type: md
+
+  - name: name
+    expr: ..name
+
+  - name: title
+    expr: ..title
+
+  - name: text-like-value
+    # WA: Dasel 3.11: With the terms reversed this doesn't match anything.
+    expr: search($this =~ r/ / && $key != 'run')
