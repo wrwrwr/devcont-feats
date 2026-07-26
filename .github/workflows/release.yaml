@@ -2,13 +2,15 @@ name: Release packages
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
   workflow_dispatch:
 
 jobs:
+  checks:
+    uses: ./.github/workflows/checks.yaml
+
   main:
-    if: ${{ github.ref == 'refs/heads/main' }}
+    needs: [checks]
     runs-on: ubuntu-latest
     permissions:
       contents: write
