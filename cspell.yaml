@@ -11,5 +11,4 @@ dictionaryDefinitions:
     path: .vale/config/vocabularies/project/accept.txt
 
 ignorePaths:
-  - /.cache/CACHEDIR.TAG  # WA: Unable to parse cache.
   - license.txt

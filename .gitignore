@@ -7,6 +7,6 @@
 !/.vale/config
 !/.vale/vale.ini
 /_arch/
+/_notes/
+
 /node_modules/
-/notes/
-/package-lock.json

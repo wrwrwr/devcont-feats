@@ -21,4 +21,4 @@ jobs:
           key: results-${{ hashFiles('prek.toml') }}
 
       - name: Run lints and tests
-        uses: j178/prek-action@v2
+        uses: j178/prek-action@v3.1.0

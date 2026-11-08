@@ -38,6 +38,7 @@ To add more commands, suffix option names with 1..9:
 
 ## Command syntax
 
+<!-- rumdl-disable quotes-dashes -->
 <!-- vale off -->
 > A simple file name allows the user to run the command with any arguments
 > they wish. However, you may also specify command line arguments that have
@@ -54,6 +55,7 @@ To add more commands, suffix option names with 1..9:
 > that the following characters must be escaped with a ‘\’ if they are used
 > in command arguments: ‘,’, ‘:’, ‘=’, ‘\’. (...)
 <!-- vale on -->
+<!-- rumdl-enable quotes-dashes -->
 
 You may want to avoid the `sudoedit` built-in, wildcards, negation and
 arbitrary arguments (no ""), as these may allow more than it would seem.

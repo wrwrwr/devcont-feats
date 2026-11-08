@@ -9,7 +9,7 @@
       "managers": "npm@11"
     },
     "ghcr.io/wrwrwr/devcont-feats/pipx-install:0": {
-      "packages": "prek"
+      "packages": "prek,uv"
     }
   },
   "postStartCommand": {

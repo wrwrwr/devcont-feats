@@ -1,3 +1,4 @@
+<!-- rumdl-disable-next-line heading-capitalization -->
 # Dev Containers Features
 
 A small set of custom features for [devcontainers]:
@@ -29,4 +30,4 @@ with a base package.
 
 **License**: MIT\
 **Status**: Experimental (only tested with Ubuntu)\
-**Assisted**: Project setup updates, code reviews and fixes by VS Code Chat
+**Assisted**: Setup updates, code reviews and fixes by Copilot
